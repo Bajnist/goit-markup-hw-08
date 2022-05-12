@@ -1,0 +1,200 @@
+.header {
+    background-color: var(--first-btn-color);
+    border-bottom: 1px solid #ECECEC;
+
+}
+
+
+
+.header__icon {
+    margin-right: 10px;
+    transition-timing-function: var(--timing-funtion);
+    transition-duration: 250ms;
+    transition-property: fill;
+    &:focus,&:hover {
+            fill: var(--accent-color);
+            transition-timing-function: var(--timing-funtion);
+            transition-duration: 250ms;
+            transition-property: fill;
+
+}
+}
+
+
+.header-list2__adres {
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    &:hover svg,
+    &:focus svg {
+            fill: var(--accent-color);
+            transition-timing-function: var(--timing-funtion);
+            transition-duration: 250ms;
+            transition-property: fill;
+        }
+}
+
+.header-list2__adres1 {
+@extend %alaing-items;
+
+
+}
+
+
+.header-soc-link1 {
+    width: 16px;
+    height: 12px;
+@extend %alaing-items;
+    margin-right: 10px;
+    &:hover {
+            fill: var(--accent-color);
+            transition-timing-function: var(--timing-funtion);
+            transition-duration: 250ms;
+            transition-property: color;
+        }
+}
+
+.header-soc-link2 {
+    width: 10px;
+    height: 16px;
+    @extend %alaing-items;
+    margin-right: 10px;
+
+}
+
+
+.container-flax,
+.header-nav,
+.header-list1,
+.header-list2 {
+    display: flex;
+
+}
+
+.header-list2__tel {
+    padding-bottom: 32px;
+    padding-top: 32px;
+    &:hover svg,
+    &:focus svg {
+            fill: var(--accent-color);
+            transition-timing-function: var(--timing-funtion);
+            transition-duration: 250ms;
+            transition-property: fill;
+        }
+    
+}
+
+
+.header-list1__item {
+    margin-left: 50px;
+    &:first-child {
+            margin-left: 0;
+        }
+
+
+}
+
+
+.header-list2__item2 {
+    margin-right: 30px;
+}
+
+.header-list1 {
+
+    margin-left: 93px;
+}
+
+.header-list2 {
+    margin-left: 305px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.header-nav {
+    align-items: center;
+}
+
+
+
+.header__logo {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--first-title-color);
+    text-decoration: none;
+    padding-top: 24px;
+    padding-bottom: 25px;
+}
+
+
+.header__text {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--accent-color);
+}
+
+
+
+
+.header-list1__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--header-color);
+    display: block;
+    transition-timing-function: var(--timing-funtion);
+    transition-duration: 250ms;
+    transition-property: color;
+    padding-top: 32px;
+        padding-bottom: 32px;
+        display: block;
+        position: relative;
+        &:hover,&:focus,&.active {
+                color: var(--accent-color);
+                transition-timing-function: var(--timing-funtion);
+                transition-duration: 250ms;
+                transition-property: color;
+            }
+                        &.active::after {
+            
+                            content: '';
+                            position: absolute;
+                            bottom: -1px;
+                            left: 0;
+                            width: 100%;
+                            height: 4px;
+                            background: #2196F3;
+                            border-radius: 2px;
+                            display: block;            
+                        }
+
+}
+
+.header-list2__tel,
+.header-list2__adres {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--second-title-color);
+@extend %alaing-items;
+    transition-timing-function: var(--timing-funtion);
+    transition-duration: 250ms;
+    transition-property: color;
+    &:hover,&:focus {
+            color: var(--accent-color);
+            transition-timing-function: var(--timing-funtion);
+            transition-duration: 250ms;
+            transition-property: color;
+}
+}
