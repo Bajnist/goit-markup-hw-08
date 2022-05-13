@@ -7,20 +7,56 @@
         background-image: linear-gradient(to right,
                 rgba(47, 48, 58, 0.4),
                 rgba(47, 48, 58, 0.4)),
-            url(../images/backgroundhero.jpg);
+            url(../images/mobail.jpg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         display: flex;
         align-items: center;
         justify-content: center;
-        @media screen and (min-width:1200px) {
-                padding: 200px 458px;
+        @media (min-device-pixel-ratio: 2),
+            (-webkit-min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: linear-gradient(to right,
+                        rgba(47, 48, 58, 0.4),
+                        rgba(47, 48, 58, 0.4)),
+                    url(../images/mobail-2X.jpg);
             }
-        
+
             @media screen and (min-width:768px) {
                 padding: 118px 204px;
+                background-image: linear-gradient(to right,
+                            rgba(47, 48, 58, 0.4),
+                            rgba(47, 48, 58, 0.4)),
+                        url(../images/tablet.jpg);
+                        @media (min-device-pixel-ratio: 2),
+                            (-webkit-min-device-pixel-ratio: 2),
+                            (min-resolution: 192dpi),
+                            (min-resolution: 2dppx) {
+                                background-image: linear-gradient(to right,
+                                        rgba(47, 48, 58, 0.4),
+                                        rgba(47, 48, 58, 0.4)),
+                                    url(../images/tablet-2X.jpg);
+                            }
             }
+                         @media screen and (min-width:1200px) {
+                             padding: auto;
+                             background-image: linear-gradient(to right,
+                                     rgba(47, 48, 58, 0.4),
+                                     rgba(47, 48, 58, 0.4)),
+                                 url(../images/backgroundhero.jpg);
+            
+                             @media (min-device-pixel-ratio: 2),
+                             (-webkit-min-device-pixel-ratio: 2),
+                             (min-resolution: 192dpi),
+                             (min-resolution: 2dppx) {
+                                 background-image: linear-gradient(to right,
+                                         rgba(47, 48, 58, 0.4),
+                                         rgba(47, 48, 58, 0.4)),
+                                     url(../images/desctop-2X.jpg);
+                             }
+                         }
         &__title {
             
                 font-weight: 900;
@@ -40,6 +76,7 @@
                     font-size: 44px;
                     line-height: 1.36;
                     max-width: 696px;
+                    height: auto;
                 }
             }
             
