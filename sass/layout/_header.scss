@@ -24,8 +24,6 @@
 
 .header-list2__adres {
     display: flex;
-    padding-top: 32px;
-    padding-bottom: 32px;
     &:hover svg,
     &:focus svg {
             fill: var(--accent-color);
@@ -35,11 +33,11 @@
         }
 }
 
-.header-list2__adres1 {
-@extend %alaing-items;
+// .header-list2__adres1 {
+// @extend %alaing-items;
 
 
-}
+// }
 
 
 .header-soc-link1 {
@@ -73,8 +71,8 @@
 }
 
 .header-list2__tel {
-    padding-bottom: 32px;
-    padding-top: 32px;
+    // padding-bottom: 32px;
+    // padding-top: 32px;
     &:hover svg,
     &:focus svg {
             fill: var(--accent-color);
@@ -87,6 +85,7 @@
 
 
 .header-list1__item {
+   
     margin-left: 50px;
     &:first-child {
             margin-left: 0;
@@ -96,20 +95,51 @@
 }
 
 
+
 .header-list2__item2 {
-    margin-right: 30px;
+    margin-bottom: 10px;
+    @media screen and (min-width:1200px){
+        margin-bottom: 0;
+        margin-right: 30px;
+    }
 }
 
 .header-list1 {
     display: none;
-    margin-left: 93px;
+    
+    @media screen and (min-width:768px){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+            text-align: center;
+            margin-left: 88px;
+
+    }
+        @media screen and (min-width:1200px){
+            margin-left: 93px;
+        }
 }
 
 .header-list2 {
     display: none;
-    margin-left: 305px;
     align-items: center;
     justify-content: center;
+    @media screen and (min-width:768px){
+      display: flex;
+        margin-left: auto;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+        @media screen and (min-width:1200px){
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
 }
 
 
@@ -118,6 +148,14 @@
     align-items: center;
 }
 .mob-open{
+    @media screen and (min-width:768px) {
+            display: none;
+        }
+    
+        @media screen and (min-width:1200px) {
+            display: none;
+        }
+        padding: 0;
     display: block;
     margin-left: auto;
     background-color: transparent;
@@ -148,14 +186,16 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 1.17;
-    // font-size: 26px;
-    // line-height: 1.19;
     letter-spacing: 0.03em;
     color: var(--first-title-color);
     text-decoration: none;
     padding: 16px 0;
-    // padding-top: 24px;
-    // padding-bottom: 25px;
+   
+    @media screen and (min-width:1200px){
+        font-size: 26px;
+        line-height: 1.19;
+
+    }
 }
 
 
@@ -210,8 +250,8 @@
 .header-list2__tel,
 .header-list2__adres {
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.02em;
     color: var(--second-title-color);
 @extend %alaing-items;
@@ -222,6 +262,10 @@
             color: var(--accent-color);
             transition-timing-function: var(--timing-funtion);
             transition-duration: 250ms;
-            transition-property: color;
+            transition-property: color;        
 }
+   @media screen and (min-width:1200px) {
+       font-size: 14px;
+       line-height: 1.14;
+   }
 }

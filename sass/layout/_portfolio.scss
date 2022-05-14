@@ -1,6 +1,6 @@
 .portfolio {
     background-color: var(--first-btn-color);
-    padding: 94px 0px;
+    padding: 60px 0px;
     margin: 0 auto;
 }
 
@@ -16,9 +16,15 @@
 }
 
 .hero1__list1 {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    // margin-bottom: 50px;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+     margin-right: auto;
+    @media screen and (min-width:768px){
+        justify-content: center;
+
+    }
 }
 
 
@@ -26,9 +32,13 @@
 
 .hero1__list1-item {
     margin-right: 8px;
+    margin-bottom: 15px;
     &:last-child {
             margin-right: 0;
         }
+                @media screen and (min-width:768px){
+                    margin-bottom: 0;
+                }
 
 }
 
@@ -108,7 +118,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(33, 150, 243, 0.9);
-    transform: translateY(101%);
+    transform: translateY(150%);
     transition-timing-function: var(--timing-funtion);
     transition-duration: 250ms;
     transition-property: transform;
@@ -118,13 +128,10 @@
         }
 }
 
-.portfolio__list-item {
-    display: block;
-    text-decoration: none;
 
-}
 
-.portfolio__list-link {
+.portfolio__list-link { 
+ height: 100%;
     outline: transparent;
     display: block;
     text-decoration: none;
@@ -141,6 +148,13 @@
     
     
         }
+                 @media screen and (min-width:768px){
+                     display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                     
+                     
+                 }
 
 }
 
@@ -148,10 +162,33 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    @media screen and (min-width:768px){
+        flex-grow: 1;
+        
+    }
 }
 
 .portfolio__list-item {
-    margin: 15px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+        
+        @media screen and (min-width:768px){
+            margin: 15px;
+                width: calc(50% - 30px);
+                flex-grow: 1;
+                justify-content: start;
+                @media screen and (min-width:1200px){
+                    width: calc(100%/3 - 30px);
+                }
+        }
+        
+      
 }
 
 .portfolio__list {
@@ -159,6 +196,7 @@
 }
 
 .portfolio__title {
+    flex-grow: 1;
     border: 1px solid #eeeeee;
     border-top: 0px;
     padding: 20px 24px;
@@ -166,6 +204,8 @@
 }
 
 .portfolio__title-text {
+    font-family: 'Roboto';
+    font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 2.00;
