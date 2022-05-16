@@ -1,13 +1,15 @@
 .mob-menu{
+    opacity: 1;
+    
     @media screen and (min-width:768px){
         display: none;
     }
-     transition-timing-function: var(--timing-funtion);
-         transition-duration: 250ms;
+    transition: opacity 250ms var(--timing-funtion);
          
     position: fixed;
     background-color: #fff;
     top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
     padding: 10px 0 48px 25px;
@@ -26,10 +28,11 @@
     
 }
 .mob-menu.is-hidden{
-    display: none;
+    
+    
     opacity: 0;
-    transition-timing-function: var(--timing-funtion);
-        transition-duration: 250ms;
+    pointer-events: none;
+    transition: opacity 250ms var(--timing-funtion);
     
     
 }
@@ -79,9 +82,21 @@
     
         color: var(--header-color);
         &:hover, &:focus,&.active{
-                     color: var(--accent-color);
-                  
+                     color: #2196F3;
+                    transition-timing-function: var(--timing-funtion);
+                        transition-duration: 250ms;
+                        transition-property: color;     
                  }
+                 &::after{
+                     content: '';
+                     background-color: #2196F3;
+                     color: #2196F3;
+                     fill: #2196F3;
+                     position: absolute;
+                     width: 100%;
+                     display: block;
+                 }
+
 }
 .mob-list__adres{
         font-weight: 500;
@@ -112,9 +127,11 @@
     margin-right: 10px;
     &::before{
         content: '';
-        border: 1px solid rgba(33, 33, 33, 0.2);
+        border: 0.1px solid rgba(33, 33, 33, 0.2);
             transform: rotate(90deg);
             margin-right: 10px;
+        border-style:solid;
+       
          
     }
 
