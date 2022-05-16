@@ -119,6 +119,7 @@
 }
 
 .modal-lable__check {
+    
 
     @extend %alaing-items;
     transition-timing-function: var(--timing-funtion);
@@ -340,6 +341,7 @@
     transition-property: fill;
     &:hover,&:focus .hero__icon {
             fill: var(--accent-color);
+            
             
         }
 

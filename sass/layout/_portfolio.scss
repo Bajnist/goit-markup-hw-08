@@ -84,8 +84,13 @@
 
 
 .hero1__anim-text {
-    width: 322px;
-    height: 168px;
+    padding: 10px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -94,8 +99,7 @@
     line-height: 1.56;
     letter-spacing: 0.03em;
     color: var(--first-btn-color);
-
-
+ 
 
 }
 
@@ -111,7 +115,7 @@
 }
 
 .hero1__anim-overlay {
-
+    overflow: scroll;
     position: absolute;
     top: 0;
     left: 0;
@@ -132,6 +136,7 @@
 
 .portfolio__list-link { 
  height: 100%;
+
     outline: transparent;
     display: block;
     text-decoration: none;
@@ -152,6 +157,7 @@
                      display: flex;
                     flex-direction: column;
                     width: 100%;
+                    
                      
                      
                  }
@@ -159,47 +165,60 @@
 }
 
 .portfolio__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    @media screen and (min-width:768px){
-        flex-grow: 1;
-        
-    }
-}
-
-.portfolio__list-item {
+    
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content:center;
+    flex-wrap: wrap;
+    justify-content: start;
+
+    @media screen and (min-width:768px){
+        flex-wrap: wrap;;    
+    }
+        @media screen and (min-width:1200px){
+          width: 100%;
+          height: 100%;
+        }
+       
+}
+
+.portfolio__list-item {
+   
+    display: flex;
     align-items: center;
+    justify-content: start;
     margin-bottom: 30px;
-    margin-left: 15px;
-    margin-right: 15px;
-        
+
         @media screen and (min-width:768px){
             margin: 15px;
+            
                 width: calc(50% - 30px);
-                flex-grow: 1;
-                justify-content: start;
+        }
+                
+                
                 @media screen and (min-width:1200px){
                     width: calc(100%/3 - 30px);
+                    &:nth-child(3n+1){
+                        margin-left: 0;
+                    }
+                    &:nth-child(3n){
+                        margin-right: 0;
+                    }
                 }
-        }
+    
         
       
 }
 
-.portfolio__list {
-    margin: -15px;
-}
+
 
 .portfolio__title {
+   
     flex-grow: 1;
     border: 1px solid #eeeeee;
     border-top: 0px;
     padding: 20px 24px;
+    
 
 }
 

@@ -50,14 +50,6 @@
 
                         }
             &-item {
-                @media screen and (min-width:1200px) {
-                
-                        &:last-child {
-                            margin-right: 0;
-                        }
-                        
-                
-                    }
                 @media screen and (min-width:768px) {
                         width: calc(100%/ 3 - 30px);
                         margin: 15px 15px;
