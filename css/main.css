@@ -400,6 +400,7 @@ img {
 .hero__close {
   outline: transparent;
   display: flex;
+  align-items: center;
   position: absolute;
   width: 30px;
   height: 30px;
@@ -682,7 +683,7 @@ img {
 
 .hero {
   background-color: var(--hero-color);
-  padding: 118px 60px;
+  padding: 118px 0;
   margin: 0 auto;
   width: 100%;
   height: 400px;
@@ -701,7 +702,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .hero {
-    padding: 118px 204px;
+    padding: 118px 0;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet.jpg);
   }
 }
@@ -713,7 +714,7 @@ img {
 @media screen and (min-width: 1200px) {
   .hero {
     height: 600px;
-    padding: auto;
+    padding: 200px 0;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/backgroundhero.jpg);
   }
 }
@@ -804,7 +805,7 @@ img {
 @media screen and (min-width: 1200px) {
   .about-list__item {
     width: calc(25% - 30px);
-    margin: 0 15px;
+    margin: 15px 15px;
     max-width: 270px;
   }
 }
@@ -815,6 +816,7 @@ img {
   .about-list {
     display: flex;
     flex-wrap: wrap;
+    margin: -15px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1252,7 +1254,6 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 60px;
 }
 @media screen and (min-width: 1200px) {
   .footer__list__soc {
@@ -1331,6 +1332,7 @@ img {
   margin-left: 10px;
 }
 .footer-text {
+  margin-top: 60px;
   margin-left: auto;
   display: block;
 }
